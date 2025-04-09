@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 transition-colors;
+  }
+  
+  .input-field {
+    @apply w-full p-2 border rounded focus:ring-2 focus:ring-primary focus:border-transparent outline-none;
+  }
+  
+  .card {
+    @apply bg-white p-6 rounded-lg shadow-md;
+  }
+
+  .text-primary {
+    @apply text-blue-500;
+  }
+
+  .text-secondary {
+    @apply text-blue-600;
+  }
+}
+
+/* Add these if they're not already present */
+.bg-\[\#FFE4B5\] {
+  background-color: #FFE4B5;
+}
+
+input[readonly] {
+  background-color: white;
+  cursor: text;
+}
+
+button {
+  cursor: pointer;
+}
+
+.break-all {
+  word-break: break-all;
+} 
